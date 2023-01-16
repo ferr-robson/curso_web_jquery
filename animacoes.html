@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <style>
+        .div{
+            height: 80px;
+            width: 80px;
+            border: 1px solid #000;
+            background-color: #ccc;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(() => {
+            let visualFinal = {
+                'width': '160px',
+                'height': '160px',
+                'margin-left': '200px',
+                'margin-top': '200px',
+                'border-radius': '50%'
+            }
+
+            $('button').on('click', () => {
+                //animate({o que vou mudar}, {tempo})
+                
+                $('#div1').animate(visualFinal, {
+                    duration: 3500,
+                    start: () => { console.log('animação iniciada') },
+
+                    complete: () => {
+                        $('#div2').animate(visualFinal, {duration: 3500})
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button type="button">Iniciar animação</button>
+    <div class="div" id="div1"></div>
+    
+    <div class="div" id="div2"></div>
+</body>
+
+</html>

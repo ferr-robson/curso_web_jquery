@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() =>{
+            $('#lista1').append('<li>Item 4</li>')
+            $('#lista2').prepend('<div>Item novo</div>')
+            
+            $('#lista2').before('<p>Eu fui inserido antes da div</p>')
+            $('#lista2').after('<p>Eu fui inserido após a div</p>')
+
+            $('hr').remove()
+        })
+    </script>
+</head>
+<body>
+    <ul id="lista1">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <div id="lista2">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <hr/>
+</body>
+<script>
+    
+</script>
+</html>

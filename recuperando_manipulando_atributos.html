@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() =>{
+            $('div').attr('style', 'background-color: blue; width: 200px; height: 200px;')
+        })
+    </script>
+</head>
+<body>
+    <img src="esfera_1.png" border="5">
+    <div style="background-color: red; width: 100px; height: 100px;"></div>
+    <input type="text" value="Eu sou um input">
+</body>
+<script>
+    $('img').attr('src', 'esfera_2.png')
+    $('img').attr('border', 20)
+</script>
+</html>
